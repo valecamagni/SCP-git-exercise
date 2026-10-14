@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-N_EVENTS = 10000
+N_EVENTS = 50000
 PT_MIN = 20.0
 ETA_MAX = 2.4
 OUTPUT_FILE = "ditau_masses.csv"
