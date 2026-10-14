@@ -1,0 +1,21 @@
+name: Check name in README
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Verify README contains my name
+        shell: bash
+        run: |
+          if grep -Fq 'Valentina Camagni' README.md; then
+            echo 'Success: the README contains the required name.'
+          else
+            echo 'Error: the README must contain Valentina Camagni.'
+            exit 1
+          fi
